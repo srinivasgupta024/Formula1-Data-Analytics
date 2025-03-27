@@ -1,11 +1,17 @@
-# 🏎️ F1 Racing Data Engineering Project
+# 🏎️ F1 Racing Data Engineering Project  
 
-## 📌 Project Overview  
-This project builds a **cloud-based data pipeline** for analyzing Formula 1 racing data using **Azure and Databricks**. The pipeline ingests, processes, and visualizes race statistics from the **Ergast API**, a well-known open-source F1 dataset.
+## 📌 Project Objective  
+The goal of this project was to build a **scalable data pipeline** to analyze Formula 1 racing trends and performance. By ingesting and processing F1 race data, I aimed to uncover insights into **driver performance, team dominance, track-specific advantages, and seasonal trends** using **Azure and Databricks**.  
 
 ## Architecture Diagram
+<img width="626" alt="architecture diagram" src="https://github.com/user-attachments/assets/fe432dc9-aeec-4857-b2b0-9c900541eedf" />
 
-<img width="626" alt="architecture diagram" src="https://github.com/user-attachments/assets/3b6a0f49-04c0-459c-81fe-f4fda60b1916" />
+## 🔍 Key Questions Explored  
+1. **Which F1 drivers have been the most consistent across seasons?**  
+2. **How do different teams perform on various circuits?**  
+3. **What are the factors influencing race outcomes (e.g., qualifying position vs. final result)?**  
+4. **Which tracks favor specific teams or drivers?**  
+5. **Has there been a shift in race strategies over the years (e.g., pit stop trends, speed improvements)?**  
 
 ## 🚀 Tech Stack  
 - **Cloud**: Microsoft Azure  
@@ -16,47 +22,42 @@ This project builds a **cloud-based data pipeline** for analyzing Formula 1 raci
 - **Orchestration**: ADF Pipelines  
 - **Visualization**: Power BI  
 
-## 📊 Data Pipeline Architecture  
-1. **Data Ingestion**  
-   - Fetch race data from the **Ergast API**  
-   - Store raw data in **Azure Data Lake (Raw Layer)**  
+## 📊 Insights & Findings  
 
-2. **Data Transformation**  
-   - Clean and process the raw data using **Databricks & PySpark**  
-   - Store refined data in **Azure Data Lake (Presentation Layer)**  
+### 🏆 1. Driver Performance Trends  
+- **Lewis Hamilton and Max Verstappen** consistently finished in the top positions, showing high reliability.  
+- Certain drivers **improved significantly** over seasons, highlighting skill growth or better team strategy.  
 
-3. **Data Analytics & Reporting**  
-   - Use **Power BI** to visualize race trends, driver performance, and team statistics  
+### 🏁 2. Team Dominance  
+- **Red Bull & Mercedes** dominated in recent years, but **Ferrari performed better on specific tracks** like Monza.  
+- Team **pit stop strategies influenced race outcomes**, with faster stops leading to better results.  
 
-## 🏗️ Project Structure  
-```
-📂 F1-Racing-Data-Engineering
-│── 📂 notebooks              # Databricks notebooks for transformations
-│── 📂 data                  # Sample datasets for testing
-│── 📂 pipelines             # ADF pipeline configurations
-│── 📜 requirements.txt      # Dependencies
-│── 📜 README.md             # Project documentation
-```
+### 🏟️ 3. Track-Specific Analysis  
+- **Street circuits (e.g., Monaco, Singapore)** had **fewer overtakes**, leading to predictable results based on qualifying.  
+- **High-speed tracks (e.g., Silverstone, Monza)** saw more overtakes and unexpected winners.  
 
-## 🔥 Key Features  
-✅ **Cloud-native** solution using Azure services  
-✅ **Scalable & efficient** processing with Databricks  
-✅ **Optimized storage** with Delta Lake  
-✅ **End-to-end automation** with ADF  
+### ⏳ 4. Race Strategy & Trends  
+- Over the years, **pit stop strategies evolved**, with teams optimizing for fewer, faster stops.  
+- Qualifying position **correlates highly** with final race results on certain circuits but **not on unpredictable tracks** like Spa.  
 
-## 🎯 How to Run  
-1. **Set up Azure services**: ADLS, Databricks, and ADF  
-2. **Clone this repo** and configure credentials  
-3. **Run Databricks notebooks** for data processing  
-4. **Deploy ADF pipelines** to automate ingestion  
-5. **Visualize insights** in Power BI  
+## 🏗️ Project Workflow  
+1. **Data Ingestion** → Fetched F1 race data from **Ergast API** → Stored in **Azure Data Lake (Raw Layer)**  
+2. **Data Processing** → Used **Databricks & PySpark** to clean and transform data → Stored refined data in **Delta Lake**  
+3. **Data Visualization** → Created **Power BI dashboards** to analyze trends  
 
-## 🤝 Contributing  
-Feel free to fork this repository and submit **pull requests** for improvements.  
+## 📊 Power BI Dashboards (Key Metrics)  
+- **Driver & Team Standings Over Time** 📈  
+- **Circuit-Wise Performance Analysis** 🏟️  
+- **Pit Stop Efficiency & Strategy Impact** ⏳  
+- **Qualifying vs. Race Finish Correlation** 🏁  
+
+## 🎯 Conclusion  
+This project provided **data-driven insights into Formula 1 racing**, revealing the **impact of strategy, driver consistency, and track characteristics on race outcomes**. The **data pipeline is scalable**, allowing for **continuous updates** with new race data.  
+
+## 🤝 Future Enhancements  
+🔹 Incorporate **weather & tire data** for deeper strategy insights  
+🔹 Use **Machine Learning** to predict race winners based on historical data  
+🔹 Automate real-time data ingestion for live race analytics  
 
 ## 📞 Contact  
 For questions, reach out via [LinkedIn](https://www.linkedin.com/in/srinivas-gupta).  
-
----
-
-Would you like to add any **SQL transformations**, **Databricks queries**, or **pipeline screenshots** to the README? 🚀
